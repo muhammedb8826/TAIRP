@@ -1,3 +1,7 @@
+:root {
+    --main-width: 1200px; 
+}
+
 *, ::after, ::before {
     box-sizing: border-box;
     margin: 0;
@@ -115,6 +119,63 @@ section a {
 section a:hover {
     background-color: rgb(231, 81, 81);
 }
+
+.ingredients {
+    width: var(--main-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5em 1em;
+}
+
+.ingredients-titles {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 2em;
+   gap: 1em;
+}
+
+.ingredients-titles h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.ingredients-titles p {
+    text-align: center;
+    color: orange;
+    font-weight: 300;
+}
+
+.ingredients-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+}
+
+.ingredients-item {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.ingredients-item img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.ingredients-item p {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+
 
 @media (max-width: 768px) {
 
