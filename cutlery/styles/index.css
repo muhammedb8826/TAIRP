@@ -121,10 +121,11 @@ section a:hover {
 }
 
 .ingredients {
-    width: var(--main-width);
+    max-width: var(--main-width);
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 2.5em 1em;
+    padding: 5em 1em;
 }
 
 .ingredients-titles {
@@ -173,6 +174,90 @@ section a:hover {
 .ingredients-item p {
     width: 100%;
     text-align: center;
+    font-weight: 700;
+}
+
+.instructions {
+    width: 100%;
+    padding: 2.5em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.instructions .cards-background-image {
+    background-color: #F7F6F4;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: repeat-x;
+    background-size: cover;
+    width: 100%;
+}
+
+.cards {
+    width: 100%;
+    max-width: var(--main-width);
+    padding: 2.5em 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+.cards .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.cards .card:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-text {
+    width: 100%;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card-text img {
+    width: 50%;
+}
+
+.card-text p {
+    width: 100%;
+}
+
+.author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.author img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.author p span {
     font-weight: 700;
 }
 
