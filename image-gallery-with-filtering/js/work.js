@@ -56,6 +56,10 @@ const datas = [{
 
 const paint = () => {
     container.innerHTML = "";
+    people.classList.remove('active');
+    cars.classList.remove('active');
+    nature.classList.remove('active');
+    showAll.classList.add('active');
     datas.forEach((data) => {
         data.nature.forEach((image) => {
             container.innerHTML += `<div class="images"><img src="${image.src}"><h3>${image.title}</h3><p>${image.description}</p></div>`;
@@ -75,6 +79,10 @@ showAll.addEventListener('click', () => {
 
 
 nature.addEventListener('click', () => {
+    people.classList.remove('active');
+    cars.classList.remove('active');
+    nature.classList.add('active');
+    showAll.classList.remove('active');
     container.innerHTML = "";
     datas.forEach((data) => {
         data.nature.forEach((image) => {
@@ -84,6 +92,10 @@ nature.addEventListener('click', () => {
 })
 
 cars.addEventListener('click', () => {
+    people.classList.remove('active');
+    cars.classList.add('active');
+    nature.classList.remove('active');
+    showAll.classList.remove('active');
     container.innerHTML = "";
     datas.forEach((data) => {
         data.cars.forEach((image) => {
@@ -93,6 +105,10 @@ cars.addEventListener('click', () => {
 })
 
 people.addEventListener('click', () => {
+    people.classList.add('active');
+    cars.classList.remove('active');
+    nature.classList.remove('active');
+    showAll.classList.remove('active');
     container.innerHTML = "";
     datas.forEach((data) => {
         data.people.forEach((image) => {
